@@ -37,11 +37,10 @@ int main() {
             return 0;
         } else if( key > numbers.at(mid) ) {
             start = mid+1;
-            mid = midCalc(start, end);
         } else {
             end = mid -1;
-            mid = midCalc(start, end);
         }
+        mid = midCalc(start, end);
     }
     cout << "Element is not present inside the array" << endl;
     return 0;
