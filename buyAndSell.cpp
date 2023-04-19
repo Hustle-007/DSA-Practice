@@ -17,7 +17,10 @@ int maxProfit(vector<int>& prices) {
                 }
             }
         }
-        int maxProf = *max_element(profitArray.begin(), profitArray.end());
+        if(profitArray.size() == 0) 
+            return 0;
+
+        int maxProf{*max_element(profitArray.begin(), profitArray.end())};
 
         if( maxProf <= 0 )
             return 0;
